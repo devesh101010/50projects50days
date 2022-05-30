@@ -28,6 +28,7 @@ async function getRepos(username) {
 }
 
 function createUserCard(user) {
+    console.log(user);
     const userID = user.name || user.login
     const userBio = user.bio ? `<p>${user.bio}</p>` : ''
     const cardHTML = `
@@ -49,6 +50,10 @@ function createUserCard(user) {
   </div>
     `
     main.innerHTML = cardHTML
+
+    document.getElementsByClassName('card')[0].addEventListener('click', () => {
+        window.open('https://github.com/' + user.login);
+    })
     
 }
 

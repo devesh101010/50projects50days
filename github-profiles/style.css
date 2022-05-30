@@ -54,6 +54,12 @@ body {
   display: flex;
   padding: 3rem;
   margin: 0 1.5rem;
+  transition: 1s ease;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  transition: 1s ease;
 }
 
 .avatar {
@@ -110,4 +116,7 @@ body {
   .user-form {
     max-width: 400px;
   }
+}
+.git{
+   
 }
